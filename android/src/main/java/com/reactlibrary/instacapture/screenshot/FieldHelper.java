@@ -5,7 +5,7 @@ import android.os.Build;
 import android.view.View;
 import android.view.WindowManager;
 
-import com.tarek360.instacapture.exception.ScreenCapturingFailedException;
+import com.reactlibrary.instacapture.exception.ScreenCapturingFailedException;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;

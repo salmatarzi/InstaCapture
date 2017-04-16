@@ -6,7 +6,7 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.view.View;
 
-import com.tarek360.instacapture.exception.IllegalScreenSizeException;
+import com.reactlibrary.instacapture.exception.IllegalScreenSizeException;
 
 import rx.Observable;
 import rx.functions.Func0;
