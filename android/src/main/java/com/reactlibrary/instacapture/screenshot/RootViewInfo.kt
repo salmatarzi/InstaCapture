@@ -1,4 +1,4 @@
-package com.tarek360.instacapture.screenshot
+package com.reactlibrary.instacapture.screenshot
 
 import android.view.View
 import android.view.WindowManager
