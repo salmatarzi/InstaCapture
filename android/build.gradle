@@ -1,0 +1,59 @@
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.3.0'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.0.6"
+        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:1.4.1'
+        classpath 'com.google.gms:google-services:3.0.0'
+    }
+}
+
+apply plugin: 'com.android.library'
+apply plugin: 'com.neenbedankt.android-apt'
+apply plugin: 'android-apt'
+apply plugin: 'kotlin-android'
+apply plugin: 'com.github.dcendents.android-maven'
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion "25.0.0"
+
+    defaultConfig {
+        minSdkVersion 16
+        targetSdkVersion 22
+        versionCode 1
+        versionName "1.0"
+    }
+    lintOptions {
+        abortOnError false
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'com.facebook.react:react-native:+'
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile("com.android.support:appcompat-v7:25.0.0") {
+        ext.optional = true
+    }
+    compile "com.android.support:support-annotations:25.0.0"
+
+    compile "io.reactivex:rxandroid:1.2.0"
+    compile "io.reactivex:rxjava:1.1.9"
+    compile "com.jakewharton:butterknife:8.4.0"
+    apt "com.jakewharton:butterknife-compiler:8.4.0"
+    compile "com.squareup.picasso:picasso:2.5.2"
+    compile('com.google.android.gms:play-services-maps:8.4.0')
+    // Dependencies for local unit tests
+    testCompile "junit:junit:4.12"
+    compile "org.jetbrains.kotlin:kotlin-stdlib:1.0.6"
+}
+  
