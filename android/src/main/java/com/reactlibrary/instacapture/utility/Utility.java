@@ -46,7 +46,7 @@ public final class Utility {
 
   private static final int JPEG_COMPRESSION_QUALITY = 75;
 
-  private static File saveBitmapToFile(@NonNull final Context context,
+  public static File saveBitmapToFile(@NonNull final Context context,
       @NonNull final Bitmap bitmap) {
 
     OutputStream outputStream = null;
